@@ -18,14 +18,14 @@ describe('Tests the Pokemon component', () => {
     const pokeName = screen.getByRole('heading', { name: /pikachu details/i });
     const summaryH2 = screen.getByRole('heading', { name: /summary/i });
     const summaryText = screen.getByText(
-      /this intelligent pokémon roasts hard berries with electricity to make them tender enough to eat\./i
-      )
+      /this intelligent pokémon roasts hard berries with electricity to make them tender enough to eat\./i,
+    );
     const gameLocations = screen.getByRole('heading', {
-      name: /game locations of pikachu/i
+      name: /game locations of pikachu/i,
     });
     const favLabel = screen.getByText(/pokémon favoritado\?/i);
     const testingElArr = [pokeName, summaryH2, summaryText, gameLocations, favLabel];
-    testingElArr.forEach(element => {
+    testingElArr.forEach((element) => {
       expect(element).toBeInTheDocument();
     });
   });
@@ -36,9 +36,9 @@ describe('Tests the Pokemon component', () => {
     const detailsBtn = screen.getByRole('link', { name: /more details/i });
     userEvent.click(detailsBtn);
 
-    const gameLocationsImgs = screen.getAllByRole('img', { name: /pikachu location/i});
-    expect(gameLocationsImgs[0].src).toBe('https://archives.bulbagarden.net/media/upload/0/08/Kanto_Route_2_Map.png')
-    expect(gameLocationsImgs[1].src).toBe('https://archives.bulbagarden.net/media/upload/b/bd/Kanto_Celadon_City_Map.png')
+    const gameLocationsImgs = screen.getAllByRole('img', { name: /pikachu location/i });
+    expect(gameLocationsImgs[0].src).toBe('https://archives.bulbagarden.net/media/upload/0/08/Kanto_Route_2_Map.png');
+    expect(gameLocationsImgs[1].src).toBe('https://archives.bulbagarden.net/media/upload/b/bd/Kanto_Celadon_City_Map.png');
   });
 
   it('should have the correct behaviour when adding a pokemon as favorite', () => {
@@ -47,18 +47,18 @@ describe('Tests the Pokemon component', () => {
     const detailsBtn = screen.getByRole('link', { name: /more details/i });
     userEvent.click(detailsBtn);
 
-    const favInput = screen.getByRole('checkbox', { name: /pokémon favoritado\?/i })
+    const favInput = screen.getByRole('checkbox', { name: /pokémon favoritado\?/i });
     expect(favInput).not.toBeChecked();
 
     userEvent.click(favInput);
     const favIcon = screen.queryByRole('img', {
-      name: /pikachu is marked as favorite/i
-    })
+      name: /pikachu is marked as favorite/i,
+    });
     expect(favIcon).toBeInTheDocument();
     expect(favInput).toBeChecked();
 
     userEvent.click(favInput);
     expect(favIcon).not.toBeInTheDocument();
     expect(favInput).not.toBeChecked();
-  })
+  });
 });
