@@ -3,7 +3,7 @@ import renderWithRouter from '../renderWithRouter';
 import { About } from '../pages';
 
 describe('Tests the About page', () => {
-  it('should have a h2 headfing with the text About Pokédex', () => {
+  it('should have a h2 heading with the text About Pokédex', () => {
     renderWithRouter(<About />);
 
     const heading = screen.getByRole('heading', { name: /about pokédex/i });
