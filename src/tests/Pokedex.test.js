@@ -73,6 +73,7 @@ describe('Tests the Pokedex page', () => {
 
     userEvent.click(allBtn);
     expect(screen.getByText(/pikachu/i)).toBeInTheDocument();
+    expect(screen.getAllByTestId('pokemon-name').length === 1);
     userEvent.click(nextPokeBtn);
     expect(screen.getByText(/charmander/i)).toBeInTheDocument();
     userEvent.click(nextPokeBtn);
