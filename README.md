@@ -1,10 +1,35 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+<h1 align="center">Welcome to React-Tests</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/node-16%20%7C%7C%2018-blue.svg" />
+</p>
+
+> Project made with React and React Testing Library.
+
+
+## Prerequisites
+
+- node 16 || 18
+
+## Install
+
+```sh
+npm install
+```
+
+## Usage
+
+```sh
+npm run start
+```
+
+## Author 🧑‍💻
+
+👤 **João Felipe Zini**
+
+* Github: [@jfzini](https://github.com/jfzini)
+* LinkedIn: [@jfzini](https://linkedin.com/in/jfzini)
+
+## Stacks and abilities 💻
+React
+React Testing Library
