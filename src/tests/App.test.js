@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
-import renderWithRouter from '../renderWithRouter';
 import userEvent from '@testing-library/user-event';
+import renderWithRouter from '../renderWithRouter';
 import App from '../App';
 
 describe('Tests the component App.js', () => {
@@ -19,15 +19,11 @@ describe('Tests the component App.js', () => {
   it('should return to homepage when click on Home', () => {
     const { history } = renderWithRouter(<App />);
     const homeLink = screen.getByText('Home');
+
     userEvent.click(homeLink);
 
     const { pathname } = history.location;
     expect(pathname).toBe('/');
-
-    // const homeHeading = screen.getByRole('heading', {
-    //   name: /encountered pokémon/i
-    // });
-    // expect(homeHeading).toBeInTheDocument();
   });
 
   it('should return to about page when click on About', () => {
@@ -41,12 +37,12 @@ describe('Tests the component App.js', () => {
   });
 
   it('should return to home page when click on Home', () => {
-    const {history} = renderWithRouter(<App />)
+    const { history } = renderWithRouter(<App />);
     const homeLink = screen.getByRole('link', { name: /favorite pokémon/i });
 
-    userEvent.click(homeLink)
+    userEvent.click(homeLink);
 
     const { pathname } = history.location;
-    expect(pathname).toBe('/favorites')
+    expect(pathname).toBe('/favorites');
   });
 });
