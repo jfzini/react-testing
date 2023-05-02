@@ -14,7 +14,7 @@ describe('Tests the NotFound page', () => {
     renderWithRouter(<NotFound />);
 
     const pikachuImg = screen.getByRole('img', {
-      name: /pikachu crying because the page requested was not found/i
+      name: /pikachu crying because the page requested was not found/i,
     });
     expect(pikachuImg.src).toBe('https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif');
   });
